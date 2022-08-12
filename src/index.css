@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #121213;
+  user-select: none;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading {
+  font-size: 3.25rem;
+  margin-bottom: 3rem;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.letter {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2rem;
+  border: 2px solid #3a3a3c;
+  font-weight: 900;
+  height: 25px;
+  width: 25px;
+  padding: 20px;
+  margin: 2.5px;
+}
+
+.correct {
+  background-color: #538d4e !important;
+}
+
+.almost {
+  background-color: #b59f3b !important;
+}
+
+.attempted {
+  background-color: #3a3a3c !important;
+}
+
+.attempted-letter-card {
+  animation: flip-card 2s;
+}
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.key {
+  border-radius: 5px;
+  background-color: #3a3a3c;
+  display: inline-block;
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  background-color: #222;
+  min-height: 25px;
+  min-width: 25px;
+  padding: 20px 10px;
+  margin: 3px;
+
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.big-key{
+  padding: 20px;
+}
+
+.selected-key {
+  background-color: #3e3e3e !important;
+}
+
+.result {
+  font-size: 1.25rem;
+
+  border-radius: 5px;
+  border: #3a3a3c solid 1px;
+  padding: 10px;
+}
+
+@keyframes flip-card {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    background-color: #538d4e !important;
+  }
+
+  100% {
+    transform: rotateX(360deg);
+    background-color: #538d4e !important;
+  }
+}
+
+.answer {
+  color: #131313;
+}
