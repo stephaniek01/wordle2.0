@@ -3,7 +3,7 @@ import { BoardContext } from "../contexts/board.context";
 import Row from "./Row";
 
 const Board = () => {
-  const { gameBoard, gameStatus,answer } = useContext(BoardContext);
+  const { gameBoard, gameStatus } = useContext(BoardContext);
 
   return (
     <div className="board">
@@ -16,7 +16,6 @@ const Board = () => {
           {gameStatus.result ? "You won!!" : "Sorry, please try again"}
         </p>
       )}
-      <p className="answer">{answer}</p>
     </div>
   );
 };

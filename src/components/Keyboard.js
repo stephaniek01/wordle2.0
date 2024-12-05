@@ -6,7 +6,6 @@ import Key from "./Key";
 const Keyboard = () => {
   const { onKeySelectionHandler } = useContext(BoardContext);
 
-  // useCallback()
   const handleKeyboard = (event) => {
     onKeySelectionHandler(event.key.toUpperCase());
   }
